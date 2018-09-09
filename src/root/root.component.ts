@@ -7,4 +7,7 @@ import { Component } from "@angular/core";
 })
 export class RootComponent{
 
+    componentTitle: string = 'Angular Labs';
+    fontColor: string = 'blue';
+    
 }
