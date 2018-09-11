@@ -12,7 +12,7 @@ export class RootComponent{
         console.log(service.getCountries());
         console.log(service.getCities('USA'));
     }
-    private componentTitle: string = 'Angular Labs';
+    private componentTitle: string = 'Root Component';
     private fontColor: string = 'blue';
     
 }
