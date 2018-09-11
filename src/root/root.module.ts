@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { RootComponent } from "./root.component";
 import { LoginComponent } from "./login/login.component";
+import { InputValidator } from "./directives/validate.directive";
 
 @NgModule({
     declarations: [
         RootComponent,
-        LoginComponent
+        LoginComponent,
+        InputValidator
     ],
     imports: [
         BrowserModule,
