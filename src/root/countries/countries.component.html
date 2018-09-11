@@ -1,10 +1,16 @@
 <div class="row">
     <div class="col-md-6">
         <h4>Countries</h4>
+        <form>
+            <div class="form-group">
+                <input type="text" name="filterText" placeholder="filter" [(ngModel)]="filterText" >
+            </div>
+        </form>
+       
         <div class="list-group">
             <a 
               class="list-group-item" 
-              *ngFor="let country of countries" 
+              *ngFor="let country of countries|listStartsWith: filterText" 
               style="cursor: pointer;" 
               [class.active]="selectedCountry === country"
               (click)="onCountrySelected(country)"

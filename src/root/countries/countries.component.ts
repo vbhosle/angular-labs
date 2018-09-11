@@ -10,6 +10,7 @@ export class CountriesComponent implements OnInit{
     private countries : string[];
     private selectedCountry: string;
     private selectedCity: string;
+    private filterText:string;
 
     constructor(private countriesService: MyService){}
 

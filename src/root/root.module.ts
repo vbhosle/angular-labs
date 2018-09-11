@@ -8,6 +8,7 @@ import { InputValidator } from "./directives/validate.directive";
 import { MyService } from "./services/myservice.service";
 import { CountriesComponent } from "./countries/countries.component";
 import { CitiesComponent } from "./countries/cities/cities.component";
+import { FilterPipe } from "./pipes/filter.pipe";
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { CitiesComponent } from "./countries/cities/cities.component";
         LoginComponent,
         CountriesComponent,
         CitiesComponent,
-        InputValidator
+        InputValidator,
+        FilterPipe
     ],
     imports: [
         BrowserModule,

@@ -5,7 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class MyService {
 
-  private countries: Map<string, string[]> = new Map([['INDIA', ['Mumbai', 'Pune']], ['USA', ['California', 'New York']]]);
+  private countries: Map<string, string[]> = new Map([
+                                                      ['INDIA', ['Mumbai', 'Delhi']],
+                                                      ['INDONESIA', ['Jakarta', 'Surabaya']],                                                      
+                                                      ['IRELAND', ['Dublin', 'Galway']],
+                                                      ['USA', ['California', 'New York']],
+                                                      ['UK', ['London', 'Liverpool']]
+                                                    ]);
   constructor() { }
 
   getCountries():string[]{
