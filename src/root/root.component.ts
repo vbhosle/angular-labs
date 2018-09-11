@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { MyService } from "./services/myservice.service";
 
 @Component({
     selector: 'app-root',
@@ -7,6 +8,10 @@ import { Component } from "@angular/core";
 })
 export class RootComponent{
 
+    constructor(private service:MyService){
+        console.log(service.getCountries());
+        console.log(service.getCities('USA'));
+    }
     private componentTitle: string = 'Angular Labs';
     private fontColor: string = 'blue';
     

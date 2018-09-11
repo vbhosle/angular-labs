@@ -1,0 +1,6 @@
+<h4>Cities {{ country ? ' of '+country : ''}}</h4>
+<div class="list-group">
+    <a style="cursor: pointer" class="list-group-item" *ngFor="let city of cities" (click)="onCitySelected(city)">
+      {{ city }}
+    </a>
+</div>
