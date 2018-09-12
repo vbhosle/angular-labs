@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
+import { CanComponentDeactivate } from "../services/can-deactivate-guard.service";
 
 @Component({
     selector: 'root-login',
     templateUrl: './login.component.html'
 })
-export class LoginComponent{
+export class LoginComponent implements CanComponentDeactivate{
     private username: string = '';
     private password: string = '';
     private rememberMe: boolean = false; 
@@ -18,5 +19,9 @@ export class LoginComponent{
                 this.isLoggedIn = true;
             }
         }
+    }
+
+    canDeactivate(){
+        return confirm('Do you want to leave the login page?');
     }
 }

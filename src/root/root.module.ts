@@ -10,6 +10,7 @@ import { CountriesComponent } from "./countries/countries.component";
 import { CitiesComponent } from "./countries/cities/cities.component";
 import { FilterPipe } from "./pipes/filter.pipe";
 import { AppRoutingModule } from "./app-routing.module";
+import { PageNotFoundComponent } from "./not-found.component";
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from "./app-routing.module";
         LoginComponent,
         CountriesComponent,
         CitiesComponent,
+        PageNotFoundComponent,
         InputValidator,
         FilterPipe
     ],

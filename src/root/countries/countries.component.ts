@@ -1,11 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { MyService } from "../services/myservice.service";
+import { CanComponentDeactivate } from "../services/can-deactivate-guard.service";
 
 @Component({
     selector: 'countries',
     templateUrl: './countries.component.html'
 })
-export class CountriesComponent implements OnInit{
+export class CountriesComponent implements OnInit, CanComponentDeactivate{
 
     private countries : string[];
     private selectedCountry: string;
@@ -25,5 +26,9 @@ export class CountriesComponent implements OnInit{
 
     onCitySelected(city:string){
         this.selectedCity = city;
+    }
+
+    canDeactivate(){
+        return confirm('Do you want to leave the countries page?');
     }
 }

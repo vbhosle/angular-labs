@@ -1,27 +1,27 @@
-<div class="row">
-    <div class="col-md-6">
-        <h4>Countries</h4>
-        <form>
-            <div class="form-group">
-                <input type="text" name="filterText" placeholder="filter" [(ngModel)]="filterText" >
+<div class="panel panel-primary">
+    <div class="panel-heading">Countries: Parent Child, Custom Pipe</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Countries</h4>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="filterText" placeholder="filter" [(ngModel)]="filterText">
+                    </div>
+                </form>
+
+                <div class="list-group">
+                    <a class="list-group-item" *ngFor="let country of countries|listStartsWith: filterText" style="cursor: pointer;" [class.active]="selectedCountry === country"
+                        (click)="onCountrySelected(country)">
+                        {{country}}
+                    </a>
+                </div>
+                <p>Selected Country: {{ selectedCountry }}</p>
+                <p>Selected City: {{ selectedCity }}</p>
             </div>
-        </form>
-       
-        <div class="list-group">
-            <a 
-              class="list-group-item" 
-              *ngFor="let country of countries|listStartsWith: filterText" 
-              style="cursor: pointer;" 
-              [class.active]="selectedCountry === country"
-              (click)="onCountrySelected(country)"
-              >
-              {{country}}
-            </a>
+            <div class="col-md-6">
+                <cities [country]="selectedCountry" (selectedCity)="onCitySelected($event)"></cities>
+            </div>
         </div>
-        <p>Selected Country: {{ selectedCountry }}</p>
-        <p>Selected City: {{ selectedCity }}</p>
     </div>
-    <div class="col-md-6">
-        <cities [country]="selectedCountry" (selectedCity)="onCitySelected($event)"></cities>
     </div>
-</div>
