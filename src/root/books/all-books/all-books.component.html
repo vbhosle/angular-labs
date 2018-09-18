@@ -1,0 +1,37 @@
+<button type="button" (click)="onFetch()">Fetch all books</button>
+<div class="container" *ngIf="books; else alternateMessage">
+    <div class="row">
+        <div class="col col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>PageCount</th>
+                        <th>Excerpt</th>
+                        <th>PublishDate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{ book.ID }}</td>
+                        <td>{{ book.Title }}</td>
+                        <td>
+                            {{ book.Description|shorten:true:50 }}
+                        </td>
+                        <td>{{ book.PageCount }}</td>
+                        <td>{{ book.Excerpt|shorten:true:50 }}</td>
+                        <td>{{ book.PublishDate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<ng-template #alternateMessage>
+    <div class="container">
+        <div *ngIf="errorMessage">{{ errorMessage }}</div>
+        <div *ngIf="requestInProgress" class="loader"></div>
+    </div>
+</ng-template>

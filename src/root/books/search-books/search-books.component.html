@@ -1,0 +1,33 @@
+<form>
+    <div class="form-group">
+        <label for="bookID">Book id</label>
+        <input type="number" class="form-control" id="bookID" name="bookID" [(ngModel)]="bookID">
+    </div>
+    <button type="button" class="btn btn-default" (click)="onSearch()">Search</button>
+</form>
+<div class="container" *ngIf="book;else alternateMessage">
+    <div class="row">
+        <div class="col col-md-12">
+            <p>
+                <strong>ID: </strong>{{ book.ID }}
+                <br>
+                <strong>Title: </strong>{{ book.Title }}
+                <br>
+                <strong>Description: </strong>{{ book.Description|shorten:true:50 }}
+                <br>
+                <strong>PageCount: </strong>{{ book.PageCount }}
+                <br>
+                <strong>Excerpt: </strong> {{ book.Excerpt|shorten:true:50 }}
+                <br>
+                <strong>PublishDate: </strong> {{ book.PublishDate }}
+                <br>
+            </p>
+        </div>
+    </div>
+</div>
+<ng-template #alternateMessage>
+    <div class="container">
+        <div *ngIf="errorMessage">{{ errorMessage }}</div>
+        <div *ngIf="requestInProgress" class="loader"></div>
+    </div>
+</ng-template>

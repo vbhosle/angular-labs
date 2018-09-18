@@ -1,20 +1,20 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
+import { Book } from "../books/all-books/book.model";
 
 @Injectable()
 export class MyRestService{
 
-    private allCountriesURL:string = 'http://services.groupkt.com/country/get/all';
-    private getCountryURL:string = 'http://services.groupkt.com/country/get/iso2code';
+    private booksURL:string = 'https://fakerestapi.azurewebsites.net/api/Books';
     
     constructor(private httpClient: HttpClient){}
 
-    getAllCountries(){
+    getAllBooks(){
         console.log('subscribed!');
-        return this.httpClient.get(this.allCountriesURL);
+        return this.httpClient.get<Book[]>(this.booksURL);
     }
 
-    getCountryByCode(countryCode: string){
-        return this.httpClient.get(`${this.getCountryURL}/${countryCode}`);
+    getBookById(id: number){
+        return this.httpClient.get<Book>(this.booksURL+"/"+id);
     }
 }

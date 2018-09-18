@@ -11,6 +11,12 @@ import { CitiesComponent } from "./countries/cities/cities.component";
 import { FilterPipe } from "./pipes/filter.pipe";
 import { AppRoutingModule } from "./app-routing.module";
 import { PageNotFoundComponent } from "./not-found.component";
+import { AllBooksComponent } from "./books/all-books/all-books.component";
+import { MyRestService } from "./services/myrest.service";
+import { HttpClientModule } from "@angular/common/http";
+import { ShortenPipe } from "./pipes/shorten.filter";
+import { SearchBookComponent } from "./books/search-books/search-books.component";
+import { BooksComponent } from "./books/books.component";
 
 @NgModule({
     declarations: [
@@ -18,16 +24,21 @@ import { PageNotFoundComponent } from "./not-found.component";
         LoginComponent,
         CountriesComponent,
         CitiesComponent,
+        BooksComponent,
+        AllBooksComponent,
+        SearchBookComponent,
         PageNotFoundComponent,
         InputValidator,
-        FilterPipe
+        FilterPipe,
+        ShortenPipe
     ],
     imports: [
         BrowserModule,
         FormsModule,
+        HttpClientModule,
         AppRoutingModule
     ],
-    providers: [MyService],
+    providers: [MyService, MyRestService],
     bootstrap: [RootComponent]
 })
 export class Angular2{
