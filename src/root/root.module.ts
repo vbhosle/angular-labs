@@ -22,6 +22,10 @@ import { JokeListComponent } from "./codecraft/jokes/joke-list/joke-list.compone
 import { JokeComponent } from "./codecraft/jokes/joke/joke.component";
 import { JokesComponent } from "./codecraft/jokes/jokes.component";
 import { CodecraftComponent } from "./codecraft/codecraft.component";
+import { BuiltInDirectivesComponent } from "./codecraft/built-in-directives/built-in-directives.component";
+import { NgForExampleComponent } from "./codecraft/built-in-directives/ng-for-example.component";
+import { NgIfExampleComponent } from "./codecraft/built-in-directives/ng-if-example.component";
+import { NgSwitchExampleComponent } from "./codecraft/built-in-directives/ng-switch-example.component";
 
 @NgModule({
     declarations: [
@@ -40,7 +44,11 @@ import { CodecraftComponent } from "./codecraft/codecraft.component";
         JokeComponent,
         JokeListComponent,
         JokesComponent,
-        CodecraftComponent
+        CodecraftComponent,
+        BuiltInDirectivesComponent,
+        NgForExampleComponent,
+        NgIfExampleComponent,
+        NgSwitchExampleComponent
     ],
     imports: [
         BrowserModule,
