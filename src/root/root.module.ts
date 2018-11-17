@@ -17,6 +17,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { ShortenPipe } from "./pipes/shorten.filter";
 import { SearchBookComponent } from "./books/search-books/search-books.component";
 import { BooksComponent } from "./books/books.component";
+import { JokeFormComponent } from "./jokes/joke-form/joke-form.component";
+import { JokeListComponent } from "./jokes/joke-list/joke-list.component";
+import { JokeComponent } from "./jokes/joke/joke.component";
 
 @NgModule({
     declarations: [
@@ -30,7 +33,10 @@ import { BooksComponent } from "./books/books.component";
         PageNotFoundComponent,
         InputValidator,
         FilterPipe,
-        ShortenPipe
+        ShortenPipe,
+        JokeFormComponent,
+        JokeComponent,
+        JokeListComponent
     ],
     imports: [
         BrowserModule,
