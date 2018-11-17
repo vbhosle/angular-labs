@@ -6,6 +6,7 @@ import { JokeComponent } from "../joke/joke.component";
     selector: "joke-list",
     template: `
   <joke-form (jokeCreated)="addJoke($event)"></joke-form>
+  <br>
   <button type="button"
         class="btn btn-danger"
         (click)="deleteJoke()">Clear Jokes

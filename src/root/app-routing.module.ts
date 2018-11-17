@@ -7,13 +7,17 @@ import { CanDeactivateGuard } from "./services/can-deactivate-guard.service";
 import { AllBooksComponent } from "./books/all-books/all-books.component";
 import { SearchBookComponent } from "./books/search-books/search-books.component";
 import { BooksComponent } from "./books/books.component";
-import { JokesComponent } from "./jokes/jokes.component";
+import { CodecraftComponent } from "./codecraft/codecraft.component";
+import { JokesComponent } from "./codecraft/jokes/jokes.component";
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent, canDeactivate: [CanDeactivateGuard] },
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'countries', component: CountriesComponent, canDeactivate: [CanDeactivateGuard] },
-    { path: 'jokes', component: JokesComponent   },
+    { path: 'codecraft', component: CodecraftComponent, children: [
+            { path: '', component: JokesComponent } 
+        ] 
+    },
     { path: 'books', component: BooksComponent, children: [
             { path: 'all', component: AllBooksComponent, canDeactivate: [CanDeactivateGuard]},
             { path: 'search', component: SearchBookComponent, canDeactivate: [CanDeactivateGuard] },

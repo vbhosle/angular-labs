@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Joke } from '../joke.model';
-import { ViewEncapsulation } from '@angular/core';
+// import { ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'joke-form',

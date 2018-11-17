@@ -17,10 +17,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { ShortenPipe } from "./pipes/shorten.filter";
 import { SearchBookComponent } from "./books/search-books/search-books.component";
 import { BooksComponent } from "./books/books.component";
-import { JokeFormComponent } from "./jokes/joke-form/joke-form.component";
-import { JokeListComponent } from "./jokes/joke-list/joke-list.component";
-import { JokeComponent } from "./jokes/joke/joke.component";
-import { JokesComponent } from "./jokes/jokes.component";
+import { JokeFormComponent } from "./codecraft/jokes/joke-form/joke-form.component";
+import { JokeListComponent } from "./codecraft/jokes/joke-list/joke-list.component";
+import { JokeComponent } from "./codecraft/jokes/joke/joke.component";
+import { JokesComponent } from "./codecraft/jokes/jokes.component";
+import { CodecraftComponent } from "./codecraft/codecraft.component";
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { JokesComponent } from "./jokes/jokes.component";
         JokeFormComponent,
         JokeComponent,
         JokeListComponent,
-        JokesComponent
+        JokesComponent,
+        CodecraftComponent
     ],
     imports: [
         BrowserModule,

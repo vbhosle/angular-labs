@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <h4 class="panel-heading">
+        <ng-content select=".setup"></ng-content>
+    </h4>
+    <div class="panel-body">
+        <p class="card-text" [hidden]="data.hide">
+            <ng-content select=".punchline"></ng-content>
+        </p>
+        <a (click)="data.toggle()" class="btn btn-warning">Tell Me
+        </a>
+    </div>
+</div>

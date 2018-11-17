@@ -11,20 +11,10 @@
                 <a>Countries [Pipe]</a>
             </li>
             <li routerLink="/books" routerLinkActive="active"><a>All Books [REST]</a></li>
-            <li routerLink="/jokes" routerLinkActive="active"><a>Jokes</a></li>
+            <li routerLink="/codecraft" routerLinkActive="active"><a>Codecraft</a></li>
         </ul>
     </div>
 </nav>
-<div class="panel panel-default">
-    <div class="panel-heading" [style.color]="fontColor">
-        <h4>{{ componentTitle }}</h4>
-    </div>
-
-    <div class="panel panel-body">
-        Lorem ipsum
-    </div>
-</div>
-<hr>
 <div class="container-fluid">
     <div class="row">
         <router-outlet></router-outlet>
