@@ -20,6 +20,7 @@ import { BooksComponent } from "./books/books.component";
 import { JokeFormComponent } from "./jokes/joke-form/joke-form.component";
 import { JokeListComponent } from "./jokes/joke-list/joke-list.component";
 import { JokeComponent } from "./jokes/joke/joke.component";
+import { JokesComponent } from "./jokes/jokes.component";
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { JokeComponent } from "./jokes/joke/joke.component";
         ShortenPipe,
         JokeFormComponent,
         JokeComponent,
-        JokeListComponent
+        JokeListComponent,
+        JokesComponent
     ],
     imports: [
         BrowserModule,
