@@ -28,6 +28,9 @@ import { NgIfExampleComponent } from "./codecraft/built-in-directives/ng-if-exam
 import { NgSwitchExampleComponent } from "./codecraft/built-in-directives/ng-switch-example.component";
 import { NgStyleExampleComponent } from "./codecraft/built-in-directives/ng-style-example.component";
 import { NgClassExampleComponent } from "./codecraft/built-in-directives/ng-class-example.component";
+import { CDJokeComponent } from "./codecraft/custom-directives/cd-joke.component";
+import { CardHoverDirective } from "./codecraft/custom-directives/card-hover.directive";
+import { CustomDirectivesComponent } from "./codecraft/custom-directives/custom-directives.component";
 
 @NgModule({
     declarations: [
@@ -52,7 +55,10 @@ import { NgClassExampleComponent } from "./codecraft/built-in-directives/ng-clas
         NgIfExampleComponent,
         NgSwitchExampleComponent,
         NgStyleExampleComponent,
-        NgClassExampleComponent
+        NgClassExampleComponent,
+        CustomDirectivesComponent,
+        CDJokeComponent,
+        CardHoverDirective
     ],
     imports: [
         BrowserModule,

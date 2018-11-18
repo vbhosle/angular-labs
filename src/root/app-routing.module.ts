@@ -15,6 +15,7 @@ import { NgIfExampleComponent } from "./codecraft/built-in-directives/ng-if-exam
 import { NgSwitchExampleComponent } from "./codecraft/built-in-directives/ng-switch-example.component";
 import { NgStyleExampleComponent } from "./codecraft/built-in-directives/ng-style-example.component";
 import { NgClassExampleComponent } from "./codecraft/built-in-directives/ng-class-example.component";
+import { CustomDirectivesComponent } from "./codecraft/custom-directives/custom-directives.component";
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent, canDeactivate: [CanDeactivateGuard] },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
                     { path: '', redirectTo: 'ngForExample',  pathMatch: 'full' }
                 ]
             } ,
+            { path: 'custom-directives', component: CustomDirectivesComponent },
             { path: '', component: JokesComponent,  pathMatch: 'full' }
 
         ] 
