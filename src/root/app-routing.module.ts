@@ -13,6 +13,8 @@ import { BuiltInDirectivesComponent } from "./codecraft/built-in-directives/buil
 import { NgForExampleComponent } from "./codecraft/built-in-directives/ng-for-example.component";
 import { NgIfExampleComponent } from "./codecraft/built-in-directives/ng-if-example.component";
 import { NgSwitchExampleComponent } from "./codecraft/built-in-directives/ng-switch-example.component";
+import { NgStyleExampleComponent } from "./codecraft/built-in-directives/ng-style-example.component";
+import { NgClassExampleComponent } from "./codecraft/built-in-directives/ng-class-example.component";
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent, canDeactivate: [CanDeactivateGuard] },
@@ -23,6 +25,8 @@ const appRoutes: Routes = [
                     { path: 'ngForExample', component: NgForExampleComponent },
                     { path: 'ngIfExample', component: NgIfExampleComponent },
                     { path: 'ngSwitchExample', component: NgSwitchExampleComponent},
+                    { path: 'ngStyleExample', component: NgStyleExampleComponent},
+                    { path: 'ngClassExample', component: NgClassExampleComponent},
                     { path: '', redirectTo: 'ngForExample',  pathMatch: 'full' }
                 ]
             } ,
