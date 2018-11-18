@@ -10,7 +10,7 @@ import { Joke } from "../jokes/joke.model";
         </h4>
         <div class="panel-body">
             <p class="card-text" [style.display]="'none'">
-                {{ data.punchline }}
+                {{ data.punchline | sayLol }}
             </p>
         </div>
     </div>

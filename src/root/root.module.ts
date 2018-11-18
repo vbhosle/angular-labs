@@ -31,6 +31,7 @@ import { NgClassExampleComponent } from "./codecraft/built-in-directives/ng-clas
 import { CDJokeComponent } from "./codecraft/custom-directives/cd-joke.component";
 import { CardHoverDirective } from "./codecraft/custom-directives/card-hover.directive";
 import { CustomDirectivesComponent } from "./codecraft/custom-directives/custom-directives.component";
+import { SayLolPipe } from "./codecraft/custom-directives/say-lol.pipe";
 
 @NgModule({
     declarations: [
@@ -58,7 +59,8 @@ import { CustomDirectivesComponent } from "./codecraft/custom-directives/custom-
         NgClassExampleComponent,
         CustomDirectivesComponent,
         CDJokeComponent,
-        CardHoverDirective
+        CardHoverDirective,
+        SayLolPipe
     ],
     imports: [
         BrowserModule,
